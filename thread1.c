@@ -1,11 +1,10 @@
-
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 static void *
-threadFunc(void *arg)
+threadPrintMsg(void *arg)
 {
     char *s = (char *) arg;
 
@@ -21,7 +20,7 @@ main (int argc, char **argv)
     void *res;
     int s;
 
-    s = pthread_create(&t1, NULL, threadFunc, "Hello world\n");
+    s = pthread_create(&t1, NULL, threadPrintMsg, "Hello, macOS clang C thread \n");
     if (s != 0) {
         fprintf(stderr, "error\n");
         exit(EXIT_FAILURE);
