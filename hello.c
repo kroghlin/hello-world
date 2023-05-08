@@ -1,5 +1,4 @@
 /* hello.c */
-/* 2023/05/08 clone from GitHub */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -21,12 +20,12 @@ int main(int argc, char ** argv)
     printf("Hello, macOS C !\n");
     
     printf("argc = %d\n", argc);
-	if (argc > 0) {
-		printf("argv[0] = %s\n", argv[0]);
-		printf("argv[1] = %s\n", argv[1]);
-	}
+    if (argc > 0) {
+	for (int j=1; j < argc; j++)
+	    printf("argv[%d] = %s\n", argv[j]);					
+    }
 
-    printf("abs(-35) = %d\n", abs(-35));
+    printf("abs(-35 - 7) = %d\n", abs(-35 - 7));
 
     timeDemo();
 
