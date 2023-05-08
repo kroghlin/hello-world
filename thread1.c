@@ -3,8 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-static void *
-threadPrintMsg(void *arg)
+static void *threadPrintMsg(void *arg)
 {
     char *s = (char *) arg;
 
@@ -13,8 +12,7 @@ threadPrintMsg(void *arg)
     return  (void *) strlen(s);
 }
 
-int
-main (int argc, char **argv)
+int main (int argc, char **argv)
 {
     pthread_t t1;
     void *res;
@@ -37,5 +35,4 @@ main (int argc, char **argv)
 
     exit(EXIT_SUCCESS);
 }
-
 
